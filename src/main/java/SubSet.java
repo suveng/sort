@@ -5,7 +5,7 @@ import java.util.List;
  * @author suwenguang
  * email suveng@163.com
  * since 2019/4/1
- * description:
+ * description: 打印全部子集，排列组合
  **/
 public class SubSet {
     public static void main(String[] args) {

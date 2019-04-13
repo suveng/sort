@@ -117,6 +117,7 @@ public class SortUtils {
      * @param lastIndex 最后的位置
      */
     private static void buildMaxHeap(int[] arr, int lastIndex) {
+
         for (int i = (lastIndex - 1) / 2; i >= 0; i--) {
             int bigChild = i * 2 + 1;
             if (bigChild + 1 <= lastIndex && arr[bigChild] < arr[bigChild + 1]) {

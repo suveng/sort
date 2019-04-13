@@ -5,7 +5,7 @@ import java.util.Map;
  * @author suwenguang
  * email suveng@163.com
  * since 2019/4/4
- * description:
+ * description:通过hashCode和equals方法保证元素的唯一性，当重写equals方法时，必须重写hashCode方法，因为如果不重写这两个方法，当hashMap的key为对象时就会默认使用Object的方法，一般是不相同的，所以就会导致存储了重复值
  **/
 public class WithoutHashCode {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class WithoutHashCode {
         Key k2 = new Key(1);
         Key k3 = new Key(1);
         //锁内容存储
-        HashMap<Key, String> hm = new HashMap<Key, String>();
+        HashMap<Key, String> hm = new HashMap<>();
         //存储key.id=1的锁内容
         hm.put(k1, "Key with id is 1");
         hm.put(k2, "Key with id is 1");
@@ -33,7 +33,7 @@ class Key {
         return id;
     }
 
-    public Key(Integer id) {
+    Key(Integer id) {
         this.id = id;
     }
     //故意先注释掉equals和hashCode方法
